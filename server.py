@@ -2,6 +2,8 @@ import flask
 from flask import *
 import json, os, shutil, base64, zipfile
 
+os.chdir("../")
+
 app=Flask(__name__)
 password="x"
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024 * 1024
