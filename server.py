@@ -103,4 +103,4 @@ def download():
     data=parser()
     return make_response(base64.b64encode(open(data["name"], "rb").read()).decode())
 
-app.run()
+app.run(debug=False, host="0.0.0.0")
