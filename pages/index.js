@@ -69,7 +69,7 @@ export default function Home() {
             <div className="wrapper" style={{height:"100vh", width:"100vw"}}>
                 <div>
                 <div className="wrapper">
-                <Input bordered placeholder="Password" id="auth"></Input>
+                <Input bordered placeholder="Password" type="password" id="auth"></Input>
                 </div>
                 <Spacer></Spacer>
                 <div className="wrapper">
