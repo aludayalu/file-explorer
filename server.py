@@ -99,9 +99,9 @@ def download():
             'Access-Control-Allow-Headers': 'Content-Type',
         }
         return '', 200, response_headers
+    data=parser()
     if data["password"]!=password:
         return make_response("")
-    data=parser()
     return make_response(base64.b64encode(open(data["name"], "rb").read()).decode())
 
 app.run(debug=False, host="0.0.0.0")
