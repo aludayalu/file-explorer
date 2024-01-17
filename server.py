@@ -85,8 +85,7 @@ def upload():
         pass
     print(data)
     x=base64.b64decode(data["data"])
-    print("yes", x[0], open("converter.py", "rb").read())
-    open(data["path"]+"/"+data["name"], "wb").write(x.removeprefix(open("converter.py", "rb").read()))
+    open(data["path"]+"/"+data["name"], "wb").write(x)
     if data["name"].endswith(".zip"):
         unzip_file(data["path"]+"/"+data["name"], data["path"]+"/"+data["name"][::-1].split(".", 1)[-1][::-1])
     return make_response("true")
